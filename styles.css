@@ -24,6 +24,11 @@ body {
     color: #fff;
     text-decoration: none;
     border: none;
+    font-weight: bold;
+    font-size: medium;
+}
+.btn:hover {
+    transform: scale(1.15);
 }
 
 #header .container {
@@ -329,6 +334,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 .blog-text {
     color: #fff;
@@ -351,5 +357,50 @@ body {
 }
 .main-blogs .blog-image:hover {
     transform: scale(1.05);
+}
+.blog-content {
+    padding: 20px;
+    text-align: start;
+}
+
+#footer {
+    background: var(--black);
+    text-align: center;
+}
+.footer-icons a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    margin: 10px;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.footer-icons a:hover {
+    background: var(--main-color);
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+}
+.footer-links a:hover {
+    background: var(--main-color);
+}
+.footer-credit {
+    color: #fff;
+    font-size: 20px;
+}
+.footer-credit span {
+    color: var(--main-color);
 }
 
