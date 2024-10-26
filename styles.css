@@ -23,6 +23,7 @@ body {
     cursor: pointer;
     color: #fff;
     text-decoration: none;
+    border: none;
 }
 
 #header .container {
@@ -172,18 +173,183 @@ body {
     }    
 }
 
-#product .product-icons {
+.product-box {
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 80px;
+}
+.product-image {
+    width: 180px;
+    height: 300px;
+    padding: 20px;
+}
+.product-content {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+}
+.stars {
+    color: var(--main-color);
+    padding: 10px;
+}
+.main-box {
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 20px 80px;
+    margin: 16px;
+}
+
+.product-icons {
     color: #fff;
     display: flex;
 }
-.product-image {
-    width: 150px;
-    height: 300px;
+.product-shoping-cart {
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px;
 }
-#product .product-box .product-content {
+.heart {
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px;
+}
+.eye {
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px;
+}
+.product-price {
+    color: #fff; 
+    font-size: 20px; 
+    padding: 10px;
+}
+.product-price span {
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.product-shoping-cart:hover {
+    background: var(--main-color)
+}
+.heart:hover {
+    background: var(--main-color)
+}
+.eye:hover {
+    background: var(--main-color)
+}
+
+
+#review .review-box {
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 16px;
+    width: 400px;
+}
+.customer-review-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-inline: 20px;
+}
+.quotes-image {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.profile-content {
     color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    p{
+    text-align: center;
+    }
+}
+.profile-image {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+}
+.profile-name {
+    color: #fff;
+    font-size: 25px;
+}
+
+
+#contact .contact-content {
+    display: flex;
+    align-items: center;
+    background: rgb(59, 58, 58);
+    flex-wrap: wrap;
+    gap: 150px;
+}
+#contact{
+    justify-content: space-around;
+}
+.map {
+    width: 700px;
+    height: 500px;
+}
+.contact-content form {
+    text-align: center;
+}
+.contact-content form h3 {
+    font-size: 40px;
+    color: #fff;    
+}
+.input-box {
+    color: #fff;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    background: rgb(44, 43, 43);
+}
+.input-box span {
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+}
+.input-box input {
+    padding: 10px;
     font-size: 20px;
+    color: #fff;
+    text-transform: none;
+    background: none;
+    width: 300px;
+    height: 50px;
+    border: none;
 }
-#product .product-box .stars {
+
+#blogs .main-blogs {
+    border: 1px solid #fff;
+    width:405px;
+    text-align: start;
+}
+.blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.blog-text {
+    color: #fff;
+    font-size: 25px;
+    padding: 8px;
+}
+.main-blogs span {
     color: var(--main-color);
+    font-size: 20px;
+    padding: 8px;
 }
+.main-blogs p {
+    color: #fff;
+    padding: 8px;
+}
+.main-blogs .blog-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.main-blogs .blog-image:hover {
+    transform: scale(1.05);
+}
+
