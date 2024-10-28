@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=roboto,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
     --main-color: #d3ad7f;
@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family:"DM sans",sans-serif;
+    font-family:"roboto",sans-serif;
     background-color: var(--bg);
 }
 .btn {
@@ -26,6 +26,7 @@ body {
     border: none;
     font-weight: bold;
     font-size: medium;
+    border-radius: 3px;
 }
 .btn:hover {
     transform: scale(1.15);
@@ -57,6 +58,7 @@ body {
     margin-left: 20px;
     justify-content: space-between;
     gap: 16px;
+    font-size: 20px;
 }
  .icons .search:hover {
     cursor: pointer;
@@ -72,6 +74,55 @@ body {
 }
 .icons .menu {
     display: none;
+}
+.search-form {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    border: 1px solid #fff;
+    background: #fff;   
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.search-form input {
+    padding: 10px;
+    font-size: 20px;
+    color: var(--black);
+    text-transform: none;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.search-form label {
+    padding: 5px;
+}
+
+.cart-item-container {
+    display: none;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    background: #fff;
+    text-align: center;
+}
+.cart-item {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.cart-item img {
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+}
+.cart-item-container button {
+    margin: 20px;
 }
 
 #main {
@@ -109,7 +160,6 @@ body {
     color: var(--main-color);
 }
 #about-us {
-    padding-inline: 40px;
     padding-block: 20px;
 }
 .about-container {
@@ -137,10 +187,10 @@ body {
     }
 }
 
+
 #menu .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
-    padding-inline: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
 }
 .box-container .box {
     text-align: center;
@@ -179,9 +229,10 @@ body {
 }
 
 .product-box {
-    display: flex;
-    justify-content: space-around;
-    padding-inline: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    justify-content: center;
+    gap: 10px;
 }
 .product-image {
     width: 180px;
@@ -200,13 +251,14 @@ body {
 .main-box {
     border: 1px solid #fff;
     text-align: center;
-    padding: 20px 80px;
-    margin: 16px;
+    padding: 10px 10px;
+    width: 320px;
 }
 
 .product-icons {
     color: #fff;
     display: flex;
+    padding-left: 50px;
 }
 .product-shoping-cart {
     border: 1px solid #fff;
@@ -247,14 +299,14 @@ body {
     border: 1px solid #fff;
     text-align: center;
     padding: 10px 10px;
-    margin: 16px;
-    width: 400px;
+    width: 350px;
+
 }
 .customer-review-boxes {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 370px));
     justify-content: center;
-    padding-inline: 20px;
+    gap: 16px;
 }
 .quotes-image {
     width: 100px;
@@ -280,15 +332,17 @@ body {
 }
 
 
+
 #contact .contact-content {
     display: flex;
     align-items: center;
     background: rgb(59, 58, 58);
     flex-wrap: wrap;
-    gap: 150px;
+    gap: 100px;
 }
 #contact{
     justify-content: space-around;
+    padding-inline: 50px;
 }
 .map {
     width: 700px;
@@ -325,15 +379,18 @@ body {
     border: none;
 }
 
+
+
 #blogs .main-blogs {
     border: 1px solid #fff;
-    width:405px;
+    width:350px;
     text-align: start;
 }
 .blogs-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 30px;
 }
 .blog-text {
@@ -352,12 +409,13 @@ body {
 }
 .main-blogs .blog-image {
     width: 100%;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
 }
 .main-blogs .blog-image:hover {
     transform: scale(1.05);
 }
+
 .blog-content {
     padding: 20px;
     text-align: start;
@@ -404,3 +462,168 @@ body {
     color: var(--main-color);
 }
 
+
+
+@media (max-width:900px) {
+
+    #header{
+        
+        .icons .menu {
+            display: block;
+        }
+        .navlist {
+            display: none;
+            flex-direction: column;
+            background: gray;
+            position: absolute;
+            top: 0;
+            right:0;
+            width: 60%;
+            height: 110vh;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+        }
+        .navlist.active{
+            display: block;
+            flex-direction: column;
+            background: rgb(235, 231, 231);
+            position: fixed;
+            top: 0;
+            right:0;
+            width: 100%;
+            height: 110vh;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: auto;
+        }
+        .navlist li:not(:last-child) {
+            text-align: left;
+            width: 100%;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--white);
+        }
+    }
+    #main {
+        justify-content: center;
+        text-align: center;
+    }
+    #about-us {
+        .about-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .about-container img {
+            width: 100%;
+        }
+        .about-content {
+            padding: 20px;
+        }
+    }
+    
+    #menu {
+        .box-container .box {
+            text-align: center;
+            border: 1px solid #fff;
+            padding: 30px;
+            margin: 10px;
+            width: 44vw;
+            height: 290px;
+        }
+    }
+
+    #contact {
+        .contact-content{
+            justify-content: center;
+        }
+        .contact-content form {
+            margin-top:-30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+@media (max-width:500px) {
+    .heading {
+        font-size: 35px;
+    }
+    #main {
+        .main-content h1 {
+            font-size: 30px;
+        }
+        .main-content p {
+            font-size: 16px;
+        }
+    }
+
+    #about-us {
+        .about-container .about-img {
+            width: 100%;
+            height: 300px;
+        }
+        .about-content h1 {
+            font-size: 30px;
+        }
+        .about-content p {
+            font-size: 16px;
+        }
+    }
+
+    #menu {
+        .box-container .box {
+            text-align: center;
+            border: 1px solid #fff;
+            padding: 30px;
+            margin: 10px;
+            width: 95vw;
+            height: 290px;
+        }
+    }
+    #product {
+        .main-box {
+            width: 290px;
+        }
+    }
+
+    #review {
+        .review-box {
+            width: 300px;
+        }
+        .profile-content p {
+            font-size: 15px;
+        }
+    }
+
+    #contact {
+        .map {
+            height: 400px;
+        }
+        .contact-content {
+            width: 100%;
+        }
+        .input-box input {
+            width: 170px;
+            height:20px;
+            font-size: 18px;
+        }
+    }
+
+    #blogs {
+        justify-content: center;
+        .main-blogs {
+            width: 290px;
+        }
+        .blog-text {
+            font-size: 23px;
+        }
+        .blog-content span {
+            font-size: 18px;
+        }
+        .blog-content p {
+            font-size: 14px;
+        }
+    }
+
+    
+}
