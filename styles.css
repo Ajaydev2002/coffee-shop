@@ -16,6 +16,12 @@ body {
     font-family:"roboto",sans-serif;
     background-color: var(--bg);
 }
+.main-container {
+    width: 100%;
+    max-width: 1530px;
+    margin: auto;
+    position: relative;
+}
 .btn {
     padding: 11px 20px;
     background-color: var(--main-color);
@@ -32,14 +38,26 @@ body {
     transform: scale(1.15);
 }
 
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
 #header .container {
     background: var(--bg);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 0.5px solid #fff ;
+    border-bottom: 0.5px solid #e7e4e4 ;
     padding: 16px;
+}
+.logo {
+    width: 70px;
+    height: 70px;
 }
 .navlist a {
     font-size: 16px;
@@ -125,6 +143,8 @@ body {
     margin: 20px;
 }
 
+
+
 #main {
     background-image: url(./images/background\ image\ 2.jpeg);
     background-size: cover;
@@ -132,8 +152,11 @@ body {
     background-position:bottom center;
     display: flex;
     align-items: center;
-    height: 100vh;
     padding-left: 50px;
+}
+.main-content {
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 .main-content h1 {
     font-size: 55px;
@@ -159,30 +182,31 @@ body {
 .heading span {
     color: var(--main-color);
 }
+
+
 #about-us {
     padding-block: 20px;
 }
 .about-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
     align-items: center;
     background-color: rgb(51, 50, 50);
 }
 .about-img {
-    width: 650px;
+    width: 700px;
     height: 500px;
 }
 .about-content {
     color: #fff;
     padding-block: 40px;
     line-height: 30px;
+    padding-inline: 60px;
     h1{
         font-size: 35px;
     }
     p{
         margin-top: 20px;
-        font-size: large;
+        font-size: 16px;
         margin-bottom: 20px;
     }
 }
@@ -190,7 +214,8 @@ body {
 
 #menu .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+    grid-template-columns: repeat(3,1fr);
+    margin-inline: 100px;
 }
 .box-container .box {
     text-align: center;
@@ -228,11 +253,17 @@ body {
     }    
 }
 
+
+
+#product {
+    margin-top: 50px;
+}
+
 .product-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 .product-image {
     width: 180px;
@@ -251,29 +282,17 @@ body {
 .main-box {
     border: 1px solid #fff;
     text-align: center;
-    padding: 10px 10px;
-    width: 320px;
+    padding: 10px 50px;
+    justify-content: center;
 }
 
-.product-icons {
+.product-icons a {
     color: #fff;
-    display: flex;
-    padding-left: 50px;
-}
-.product-shoping-cart {
+    text-decoration: none;
     border: 1px solid #fff;
-    padding: 10px;
     margin: 10px;
-}
-.heart {
-    border: 1px solid #fff;
+    font-size: 15px;
     padding: 10px;
-    margin: 10px;
-}
-.eye {
-    border: 1px solid #fff;
-    padding: 10px;
-    margin: 10px;
 }
 .product-price {
     color: #fff; 
@@ -284,15 +303,10 @@ body {
     font-size: 12px;
     text-decoration: line-through;
 }
-.product-shoping-cart:hover {
+.product-icons a:hover {
     background: var(--main-color)
 }
-.heart:hover {
-    background: var(--main-color)
-}
-.eye:hover {
-    background: var(--main-color)
-}
+
 
 
 #review .review-box {
@@ -300,11 +314,13 @@ body {
     text-align: center;
     padding: 10px 10px;
     width: 350px;
-
+}
+#review {
+    margin-top: 50px;
 }
 .customer-review-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 370px));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
 }
@@ -338,18 +354,20 @@ body {
     align-items: center;
     background: rgb(59, 58, 58);
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 140px;
+    margin-inline: 17px;
 }
 #contact{
     justify-content: space-around;
-    padding-inline: 50px;
+    margin-top: 50px;
 }
 .map {
-    width: 700px;
+    width: 50vw;
     height: 500px;
 }
 .contact-content form {
     text-align: center;
+    
 }
 .contact-content form h3 {
     font-size: 40px;
@@ -379,7 +397,9 @@ body {
     border: none;
 }
 
-
+#blogs {
+    margin-top: 50px;
+}
 
 #blogs .main-blogs {
     border: 1px solid #fff;
@@ -412,14 +432,12 @@ body {
     height: 250px;
     overflow: hidden;
 }
-.main-blogs .blog-image:hover {
-    transform: scale(1.05);
-}
-
 .blog-content {
     padding: 20px;
     text-align: start;
 }
+
+
 
 #footer {
     background: var(--black);
@@ -471,37 +489,39 @@ body {
         .icons .menu {
             display: block;
         }
-        .navlist {
+        .navlist{
             display: none;
             flex-direction: column;
-            background: gray;
-            position: absolute;
-            top: 0;
+            background: rgb(90, 88, 88);
+            position: fixed;
+            top: 120px;
             right:0;
             width: 60%;
             height: 110vh;
-            padding-top: 80px;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
+            text-align: center;
+            padding: 20px;
         }
         .navlist.active{
             display: block;
+            display: flex;
             flex-direction: column;
-            background: rgb(235, 231, 231);
+            background: rgb(224, 218, 218);
             position: fixed;
-            top: 0;
+            top: 102px;
             right:0;
-            width: 100%;
+            width: 35%;
             height: 110vh;
-            padding-top: 80px;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             text-align: center;
-            margin: auto;
+            padding: 20px;
         }
-        .navlist li:not(:last-child) {
-            text-align: left;
-            width: 100%;
-            padding: 15px 20px;
-            border-bottom: 1px solid var(--white);
+        .navlist a{
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            color: var(--bg);
+
         }
     }
     #main {
@@ -522,6 +542,11 @@ body {
     }
     
     #menu {
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+        }
         .box-container .box {
             text-align: center;
             border: 1px solid #fff;
@@ -536,24 +561,41 @@ body {
         .contact-content{
             justify-content: center;
         }
+        .map {
+            width: 100%;
+        }
         .contact-content form {
             margin-top:-30px;
             margin-bottom: 30px;
+        }
+        .contact-content form h3 {
+            font-size: 30px;
         }
     }
 }
 
 
 @media (max-width:500px) {
+    #header {
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
     .heading {
         font-size: 35px;
     }
     #main {
+        .main-content {
+            text-align: center;
+            padding-right: 40px;
+        }
         .main-content h1 {
             font-size: 30px;
         }
         .main-content p {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 
@@ -563,14 +605,19 @@ body {
             height: 300px;
         }
         .about-content h1 {
-            font-size: 30px;
+            font-size: 25px;
         }
         .about-content p {
-            font-size: 16px;
+            font-size: 12px;
         }
     }
 
     #menu {
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            justify-content: center;
+        }
         .box-container .box {
             text-align: center;
             border: 1px solid #fff;
@@ -597,20 +644,32 @@ body {
 
     #contact {
         .map {
-            height: 400px;
-        }
-        .contact-content {
             width: 100%;
+            height: 300px;
+        }
+        .input-types .input-box input {
+            width: 170px;
+            height:30px;
+            font-size: 18px;
+        }
+        .input-box span {
+            color: #fff;
+            font-size: 10px;
+            padding: 15px;
         }
         .input-box input {
-            width: 170px;
-            height:20px;
+            padding: 10px;
             font-size: 18px;
+            color: #fff;
+            text-transform: none;
+            background: none;
+            width: 300px;
+            height: 50px;
+            border: none;
         }
     }
 
     #blogs {
-        justify-content: center;
         .main-blogs {
             width: 290px;
         }
