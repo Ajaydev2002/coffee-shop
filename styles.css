@@ -647,13 +647,13 @@ body {
     }
     #product {
         .main-box {
-            width: 290px;
+            width: 95vw;
         }
     }
 
     #review {
         .review-box {
-            width: 300px;
+            width: 95vw;
         }
         .profile-content p {
             font-size: 15px;
@@ -689,7 +689,7 @@ body {
 
     #blogs {
         .main-blogs {
-            width: 290px;
+            width: 95vw;
         }
         .blog-text {
             font-size: 23px;
@@ -700,6 +700,19 @@ body {
         .blog-content p {
             font-size: 14px;
         }
+    }
+    #footer {
+        .footer-icons a {
+            font-size: 12px;
+        }
+        .footer-links a {
+            font-size: 12px;
+            padding: 8px;
+        }
+        .footer-credit {
+            font-size: 15px;
+        }
+
     }
 
     
